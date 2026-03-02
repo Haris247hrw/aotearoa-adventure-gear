@@ -1,0 +1,107 @@
+/* Custom Spacing and Elements */
+.hero-section hr {
+    height: 1px;
+    background-color: #ccc;
+    opacity: 1;
+}
+
+/* Maintain square aspects for placeholders */
+.border.p-4, .border.p-5 {
+    background-color: #fafafa;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure icons/images don't break layout on small devices */
+@media (max-width: 576px) {
+    .input-group {
+        flex-direction: column;
+    }
+    .input-group > * {
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+}
+
+/* Shop Page Specific Styles ------------------------------------------------------------------------------------*/ 
+
+/* Search bar refinements */
+.input-group-lg .form-control {
+    border-radius: 0;
+}
+
+/* Star rating size */
+.x-small {
+    font-size: 0.75rem;
+}
+
+/* Responsive adjustments for the split section */
+@media (max-width: 768px) {
+    .border-end {
+        /* use logical property instead of non‑standard "border-end" */
+        border-inline-end: none !important;
+        border-bottom: 1px solid #dee2e6;
+        padding-bottom: 3rem;
+        margin-bottom: 3rem;
+    }
+}
+
+/* Category card hover effect */
+.border.p-4:hover {
+    background-color: #f0f0f0 !important;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Product Detail Specifics ------------------------------------------------------------------------------------------------------ */
+
+/* Square buttons to match wireframe style */
+.rounded-0 {
+    border-radius: 0 !important;
+}
+
+/* Review Avatar sizing */
+.rounded-circle {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dee2e6;
+}
+
+/* Model Selector dropdown styling */
+.form-select {
+    border-radius: 0;
+    border-color: #ced4da;
+}
+
+/* Ensure image placeholder scales on mobile */
+@media (max-width: 768px) {
+    .display-1 {
+        font-size: 3rem;
+    }
+}
+
+/* Shipping Page Form Styling -------------------------------------------------------------------------------------------------------*/
+.form-control, .form-select {
+    padding: 0.75rem;
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+}
+
+/* Shipping Method Selection visual feedback */
+input[type="radio"]:checked + div {
+    color: var(--primary-color);
+}
+
+/* Sidebar sticky behavior on Large screens */
+@media (min-width: 992px) {
+    .col-md-4 > .border {
+        position: sticky;
+        top: 20px;
+    }
+}

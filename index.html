@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Aotearoa Adventure Gear</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom-style.css">
+</head>
+<body>
+
+        <!-- Header: contains logo, navigation links and cart button -->
+        <!--
+            - Logo: brand image (replace path with relative URL for deployment)
+            - Nav links: primary site navigation (desktop only via `d-none d-md-block`)
+            - Cart button: opens user cart/checkout flow (hook with JS)
+        -->
+    <header class="border-bottom py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <img src="C:\Users\muham\OneDrive\Haris Documents\Open Polytechinic\BIT703 Web Technologies\BIT703 Web Technologies_A2\A2\img\BIT703-A2-01-AotearoaAdventureGearLogo-Graphic-2025-04.png" alt="Aotearoa Adventure Gear Logo" height="50">
+            </div>
+            <nav class="d-none d-md-block">
+                <a href="index.html" class="px-2 text-decoration-none">Home</a>
+                <a href="shop.html" class="px-2 text-decoration-none">About</a>
+                <a href="shop.html" class="px-2 text-decoration-none">Shop</a>
+                <a href="#" class="px-2 text-decoration-none">Help</a>
+            </nav>
+            <button class="btn btn-dark">Your Cart</button>
+        </div>
+    </header>
+
+    <!-- Main content wrapper -->
+    <main class="container py-4">
+
+        <!-- Hero section with tagline, image placeholders and a call-to-action -->
+        <!--
+            - Tagline: main marketing message
+            - Image placeholders: could be replaced by product hero images or carousel
+            - CTA button: primary action that should link to shop or featured collection
+        -->
+    <section class="text-center my-5">
+        <h1 class="display-4 fw-light">Tagline describing your e-shop</h1>
+        <hr class="w-25 mx-auto mb-4">
+        <div class="row justify-content-center mb-4">
+            <div class="col-2 border p-4 m-2"><i class="bi bi-image"></i></div>
+            <div class="col-2 border p-4 m-2"><i class="bi bi-image"></i></div>
+            <div class="col-2 border p-4 m-2"><i class="bi bi-image"></i></div>
+        </div>
+        <button class="btn btn-dark px-5 py-2">Shop Now</button>
+    </section>
+
+        <!-- Featured products slider placeholder; arrows would hook up to JS/carousel -->
+        <!--
+            - Left/right chevrons: attach carousel controls in JS
+            - Product cards: replace with dynamic content or CMS data
+        -->
+    <section class="my-5 position-relative">
+        <h2 class="text-center mb-4 fw-light">Featured Products</h2>
+        <div class="row align-items-center">
+            <div class="col-1 text-center"><i class="bi bi-chevron-left fs-2"></i></div>
+            <div class="col-5">
+                <div class="border p-5 text-center bg-light">
+                    <i class="bi bi-image fs-1 d-block mb-3"></i>
+                    <p class="mb-0">PRODUCT NAME</p>
+                    <small>$300</small>
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="border p-5 text-center bg-light">
+                    <i class="bi bi-image fs-1 d-block mb-3"></i>
+                    <p class="mb-0">PRODUCT NAME</p>
+                    <small>$300</small>
+                </div>
+            </div>
+            <div class="col-1 text-center"><i class="bi bi-chevron-right fs-2"></i></div>
+        </div>
+    </section>
+
+        <!-- Newsletter signup section -->
+        <!--
+            - Email input: collect subscriber addresses (validate client-side)
+            - Subscribe button: send to subscription endpoint or JS handler
+        -->
+    <section class="my-5 py-5 border-top border-bottom">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h3>Newsletter</h3>
+                <p class="text-muted small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.</p>
+            </div>
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="email" class="form-control" placeholder="Email Address">
+                    <button class="btn btn-outline-secondary px-4">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Additional product information grid layout -->
+        <!--
+            - Grid shows product teasers; each card can link to `product.html`
+            - Ratings and prices are static here; populate via server/JS for real data
+        -->
+    <section class="row g-4 my-5">
+        <div class="col-md-4">
+            <div class="border p-4 h-100 text-center">
+                <i class="bi bi-image fs-1 d-block my-5"></i>
+                <p class="mb-0">PRODUCT NAME</p>
+                <div class="text-warning small mb-1">★★★☆☆</div>
+                <small>$300</small>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="row g-4">
+                <div class="col-6"><div class="border p-3">...Product Info...</div></div>
+                <div class="col-6"><div class="border p-3">...Product Info...</div></div>
+                <div class="col-6"><div class="border p-3">...Product Info...</div></div>
+                <div class="col-6"><div class="border p-3">...Product Info...</div></div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+    <footer class="bg-white border-top py-5 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2026 Aotearoa Adventure Gear - New Zealand</p>
+        </div>
+    </footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

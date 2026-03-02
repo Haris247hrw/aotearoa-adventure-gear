@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Aotearoa Adventure Gear</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom-style.css">
+</head>
+<body>
+
+    <header class="border-bottom py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <img src="C:\Users\muham\OneDrive\Haris Documents\Open Polytechinic\BIT703 Web Technologies\BIT703 Web Technologies_A2\A2\img\BIT703-A2-01-AotearoaAdventureGearLogo-Graphic-2025-04.png" alt="Aotearoa Adventure Gear Logo" height="50">
+            </div>
+            <nav class="d-none d-md-block">
+                <a href="index.html" class="px-2 text-decoration-none">Home</a>
+                <a href="shop.html" class="px-2 text-decoration-none">About</a>
+                <a href="shop.html" class="px-2 text-decoration-none">Shop</a>
+                <a href="#" class="px-2 text-decoration-none">Help</a>
+            </nav>
+            <button class="btn btn-dark">Your Cart</button>
+        </div>
+    </header>
+
+    <main class="container py-5">
+    
+    <!-- Progress navigation for checkout steps: highlights current step -->
+    <nav class="mb-5 border-bottom">
+        <ul class="nav nav-justified pb-3">
+            <li class="nav-item">
+                <span class="fw-bold border-bottom border-dark border-3 pb-3">1. Shopping Cart</span>
+            </li>
+            <li class="nav-item text-muted">2. Shipping Details</li>
+            <li class="nav-item text-muted">3. Payment Options</li>
+        </ul>
+    </nav>
+
+    <div class="row g-5">
+        <div class="col-md-8">
+            <h2 class="fw-light mb-4 border-bottom pb-2">Shopping Cart</h2>
+            
+            <div class="d-flex align-items-center py-4 border-bottom">
+                <div class="bg-light p-4 me-4 border">
+                    <i class="bi bi-image fs-2"></i>
+                </div>
+                <div class="flex-grow-1">
+                    <h5 class="mb-1">PRODUCT NAME</h5>
+                    <p class="text-muted small mb-1">Lorem ipsum dolor sit amet, consectetur...</p>
+                </div>
+                <!-- Cart item envelope: shows a single cart row with item details. -->
+                <!--
+                     - `.item-price`: unit price for the product.
+                     - `.cart-quantity`: readonly input showing current qty (JS updates it).
+                     - `.qty-up` / `.qty-down`: buttons JS listens to for increment/decrement.
+                     - `.item-total`: line total (unit price * qty), updated by JS.
+                -->
+                <div class="cart-item d-flex align-items-center gap-3 ms-3">
+                    <strong class="item-price">$300</strong>
+                    <!-- Quantity control: buttons update the `.cart-quantity` value via script -->
+                    <div class="input-group" style="width: 100px;">
+                        <input type="text" class="form-control text-center cart-quantity bg-white" value="1" readonly>
+                        <div class="d-flex flex-column border">
+                            <button class="btn btn-sm p-0 px-1 qty-up">▲</button>
+                            <button class="btn btn-sm p-0 px-1 qty-down">▼</button>
+                        </div>
+                    </div>
+                    <!-- Line total for this item; script recalculates this when qty changes -->
+                    <span class="item-total">$300</span>
+                </div>
+            </div>
+
+            <div class="mt-5 d-flex gap-3">
+                <button class="btn btn-dark px-5 py-2 rounded-0">Next</button>
+                <button class="btn btn-light border px-5 py-2 rounded-0">Cancel</button>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+                <div class="p-4 border">
+                <h3 class="fw-light border-bottom pb-3">Summary</h3>
+
+                <!-- Coupon input: allows applying discount codes (requires backend or JS handling) -->
+                <div class="mb-4">
+                    <label class="small fw-bold mb-2">ENTER COUPON CODE</label>
+                    <input type="text" class="form-control border-top-0 border-start-0 border-end-0 rounded-0 ps-0">
+                </div>
+
+                <!-- Order summary rows. These are static here but typically updated by JS:
+                     - Subtotal: sum of line totals
+                     - Shipping: selected shipping option
+                     - Taxes: any applicable taxes
+                     - Total: final payable amount
+                -->
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">SUBTOTAL</span>
+                    <span class="small">$600</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted small">SHIPPING</span>
+                    <span class="small">FREE</span>
+                </div>
+                <div class="d-flex justify-content-between border-bottom pb-3 mb-3">
+                    <span class="text-muted small">TAXES</span>
+                    <span class="small">$13</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <h4 class="mb-0">TOTAL</h4>
+                    <h4 class="mb-0">$613</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+    <footer class="bg-white border-top py-5 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2026 Aotearoa Adventure Gear - New Zealand</p>
+        </div>
+    </footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

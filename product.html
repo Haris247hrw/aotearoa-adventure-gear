@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Aotearoa Adventure Gear</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom-style.css">
+</head>
+<body>
+
+    <header class="border-bottom py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <img src="C:\Users\muham\OneDrive\Haris Documents\Open Polytechinic\BIT703 Web Technologies\BIT703 Web Technologies_A2\A2\img\BIT703-A2-01-AotearoaAdventureGearLogo-Graphic-2025-04.png" alt="Aotearoa Adventure Gear Logo" height="50">
+            </div>
+            <nav class="d-none d-md-block">
+                <a href="index.html" class="px-2 text-decoration-none">Home</a>
+                <a href="shop.html" class="px-2 text-decoration-none">About</a>
+                <a href="shop.html" class="px-2 text-decoration-none">Shop</a>
+                <a href="#" class="px-2 text-decoration-none">Help</a>
+            </nav>
+            <button class="btn btn-dark">Your Cart</button>
+        </div>
+    </header>
+
+   <main class="container py-5">
+
+        <!-- Product detail section: left column shows main image placeholder -->
+        <!--
+            - Left column: main product image (use actual product image here)
+            - Right column: title, rating, price, options and Add To Cart button
+            - The `select` for model/size should map to variants that affect price/stock
+            - `Add To Cart` button should call JS to add the selected variant to cart
+        -->
+    <section class="row mb-5">
+        <div class="col-md-6 mb-4 mb-md-0">
+            <div class="border d-flex align-items-center justify-content-center bg-light" style="min-height: 450px;">
+                <i class="bi bi-image display-1 text-secondary"></i>
+            </div>
+        </div>
+
+        <!-- Right column: product information such as title, price, rating, and options -->
+        <div class="col-md-6 ps-md-5">
+            <h1 class="fw-light display-6">Product title</h1>
+            <div class="d-flex align-items-center mb-3">
+                <span class="text-warning me-2">★★★☆☆</span>
+                <small class="text-muted">5 reviews</small>
+            </div>
+            <hr class="mb-4">
+            
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <!-- Price: update when different variants are selected -->
+                <h2 class="fw-bold">$ 1232</h2>
+                <!-- Variant selector: change selection should update price/availability -->
+                <select class="form-select w-50">
+                    <option selected>Select Model</option>
+                    <option value="1">Small</option>
+                    <option value="2">Medium</option>
+                    <option value="3">Large</option>
+                </select>
+            </div>
+
+            <p class="text-muted small mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...
+            </p>
+            
+            <!-- Add To Cart: attach JS to add the selected variant and quantity to cart -->
+            <button class="btn btn-dark btn-lg px-5 py-3 rounded-0">Add To Cart</button>
+        </div>
+    </section>
+
+        <!-- Similar products section: shows other items the customer might like -->
+        <!--
+            - Use these cards to increase cross-sell; link each card to its `product.html`
+            - Ratings/prices are static here — populate dynamically in a real store
+        -->
+    <section class="border-top py-5">
+        <h3 class="text-center fw-light mb-4">Similar Products</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="border p-3 d-flex align-items-center">
+                    <div class="bg-light p-3 me-3"><i class="bi bi-image"></i></div>
+                    <div>
+                        <small class="d-block">PRODUCT NAME</small>
+                        <div class="text-warning small">★★★☆☆</div>
+                        <strong>$300</strong>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </section>
+
+        <!-- Reviews section: shows customer feedback with ratings and text -->
+        <!--
+            - Each review block should show author, date, rating and comment
+            - Consider paginating reviews or loading via AJAX for many entries
+        -->
+    <section class="border-top py-5">
+        <h3 class="fw-light mb-5">Reviews</h3>
+        
+        <div class="row mb-4 pb-4 border-bottom">
+            <div class="col-auto">
+                <div class="bg-light rounded-circle p-3"><i class="bi bi-person fs-3"></i></div>
+            </div>
+            <div class="col">
+                <h6 class="mb-0">JOHN DOE</h6>
+                <small class="text-muted">august 14, 2018</small>
+                <div class="text-warning small my-2">★★★☆☆</div>
+                <p class="text-muted small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <footer class="bg-white border-top py-5 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2026 Aotearoa Adventure Gear - New Zealand</p>
+        </div>
+    </footer>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>

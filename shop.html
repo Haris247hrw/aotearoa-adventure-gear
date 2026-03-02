@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Aotearoa Adventure Gear</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom-style.css">
+</head>
+<body>
+
+        <!-- Site header: logo, navigation and cart button -->
+        <!--
+            - Logo: replace absolute Windows path with relative `img/...` for web hosting
+            - Navigation: adjust links to correct pages (About/Shop/etc.)
+            - Cart button: hook up to cart modal or `cart.html`
+        -->
+    <header class="border-bottom py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <img src="C:\Users\muham\OneDrive\Haris Documents\Open Polytechinic\BIT703 Web Technologies\BIT703 Web Technologies_A2\A2\img\BIT703-A2-01-AotearoaAdventureGearLogo-Graphic-2025-04.png" alt="Aotearoa Adventure Gear Logo" height="50">
+            </div>
+            <nav class="d-none d-md-block">
+                <a href="index.html" class="px-2 text-decoration-none">Home</a>
+                <a href="shop.html" class="px-2 text-decoration-none">About</a>
+                <a href="shop.html" class="px-2 text-decoration-none">Shop</a>
+                <a href="#" class="px-2 text-decoration-none">Help</a>
+            </nav>
+            <button class="btn btn-dark">Your Cart</button>
+        </div>
+    </header>
+
+    <main class="container py-4">
+
+        <!-- Search hero: search bar lets users look for products -->
+        <!--
+            - Search input: implement client-side filtering or server search
+            - Submit button: should trigger search results (link to search page or filter list)
+        -->
+    <section class="text-center py-5">
+        <h1 class="display-5 fw-light mb-4">Tagline describing your e-shop</h1>
+        <hr class="w-25 mx-auto mb-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="input-group input-group-lg">
+                    <span class="input-group-text bg-white border-end-0"><i class="bi bi-search"></i></span>
+                    <input type="text" class="form-control border-start-0" placeholder="Search...">
+                    <button class="btn btn-dark px-5">Submit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Featured categories: visual links to major product groups -->
+        <!--
+            - Each category tile can link to a filtered product list
+            - The large dark tile is a CTA; replace with actual content or link
+        -->
+    <section class="my-5 text-center">
+        <h2 class="fw-light">Featured Categories</h2>
+        <p class="text-muted small mb-4">Sed ut perspiciatis unde omnis iste natus error sit voluptatem...</p>
+        <div class="row g-3 justify-content-center">
+            <div class="col-6 col-md-2">
+                <div class="border p-4 bg-light"><i class="bi bi-image d-block mb-2"></i>CATEGORY</div>
+            </div>
+            <div class="col-6 col-md-2">
+                <div class="border p-4 bg-light"><i class="bi bi-image d-block mb-2"></i>CATEGORY</div>
+            </div>
+            <div class="col-6 col-md-2">
+                <div class="border p-4 bg-light"><i class="bi bi-image d-block mb-2"></i>CATEGORY</div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="bg-dark text-white p-4 h-100 d-flex align-items-center justify-content-center">
+                    Shop Now
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop page main content: introduction block plus product list and newsletter -->
+    <section class="row g-5 my-5">
+           <!-- Left column: promotional text and call to browse all products -->
+           <!--
+               - Use this area for promotional copy or a brand statement
+               - 'Browse All' button should link to a product listing page
+           -->
+        <div class="col-md-4 border-end">
+            <div class="text-center mb-4">
+                <i class="bi bi-image display-1 text-secondary"></i>
+            </div>
+            <h3 class="fw-light mt-5">Header Regarding Your Product</h3>
+            <p class="text-muted small">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium...</p>
+            <button class="btn btn-dark px-4 mt-3">Browse All</button>
+        </div>
+
+           <!-- Right column: newsletter signup and featured product listing -->
+           <!--
+               - Newsletter: collect email via form and send to subscription endpoint
+               - Product listing: each row shows name, rating and price; link to product page
+           -->
+        <div class="col-md-8">
+            <div class="newsletter-inline border p-4 mb-5">
+                <h4 class="fw-light">Newsletter</h4>
+                <div class="input-group mt-3">
+                    <input type="email" class="form-control" placeholder="Email Address">
+                    <button class="btn btn-light border">Subscribe</button>
+                </div>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-6 d-flex align-items-center border p-2">
+                    <!-- Product row: use a loop or template to render product items dynamically -->
+                    <div class="bg-light p-3 me-3"><i class="bi bi-image"></i></div>
+                    <div>
+                        <small class="d-block">PRODUCT NAME</small>
+                        <div class="text-warning x-small">★★★☆☆</div>
+                        <strong>$300</strong>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+</main>
+
+    <footer class="bg-white border-top py-5 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2026 Aotearoa Adventure Gear - New Zealand</p>
+        </div>
+    </footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
